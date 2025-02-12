@@ -1,0 +1,85 @@
+/* Centering and Styling */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 15px;
+    width: 50%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.search-bar input:focus {
+    border-color: #4CAF50;
+}
+
+/* Table Design */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+/* Table Rows */
+td,
+th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* PASS Button */
+.pass-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pass-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* FAIL Label */
+.fail-label {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 14px;
+}

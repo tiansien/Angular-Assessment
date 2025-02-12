@@ -1,0 +1,32 @@
+<div class="table-container">
+    <div class="search-bar">
+        <input type="text" placeholder="🔍 Search by name..." (keyup.enter)="filterData($event)" />
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Income</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filteredDataList">
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.income | currency:'USD' }}</td>
+                <td>
+                    <button *ngIf="item.age >= 18 && item.income >= 3000" class="pass-btn"
+                        (click)="applyCreditCard(item.id)">
+                        ✅ PASS
+                    </button>
+                    <span *ngIf="!(item.age >= 18 && item.income >= 3000)" class="fail-label">
+                        ❌ FAIL
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
